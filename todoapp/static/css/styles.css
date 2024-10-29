@@ -1,11 +1,21 @@
+:root {
+    --main-bg-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #007BFF;
+    --primary-hover-color: #0056b3;
+    --white-color: #fff;
+    --border-color: #ddd;
+    --font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     margin: 40px;
-    background-color: #f4f4f4;
+    background-color: var(--main-bg-color);
 }
 
 h1, h2 {
-    color: #333;
+    color: var(--text-color);
 }
 
 ul {
@@ -13,27 +23,42 @@ ul {
     padding: 0;
 }
 
-li {
-    background-color: #fff;
+.task-item {
+    background-color: var(--white-color);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
-    position: relative;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
+.task-info {
+    display: flex;
+    align-items: center;
+}
+
+.task-status {
     margin-right: 10px;
 }
 
-a:hover {
+.task-desc {
+    flex-grow: 1;
+}
+
+.action-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.action-link:hover {
     text-decoration: underline;
 }
 
-button {
-    background-color: #007BFF;
-    color: #fff;
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
     border: none;
     padding: 5px 15px;
     cursor: pointer;
@@ -41,6 +66,6 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.btn:hover {
+    background-color: var(--primary-hover-color);
 }
